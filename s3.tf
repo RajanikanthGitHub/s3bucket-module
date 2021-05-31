@@ -41,7 +41,7 @@ resource "aws_s3_bucket" "my-s3-ucket" {
   }
   tags = merge (
   {
-    Name = "${var.PROUECT_NAME}"
+    Name = "${var.PROUJECT_NAME}"
     Project = "Demo-Project"
     Environment = "${var.ENVIRONMENT}"
     ManagedBy = "Terraform"
