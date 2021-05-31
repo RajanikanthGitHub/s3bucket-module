@@ -3,8 +3,8 @@ variable "PROUECT_NAME" {
 }
 
 variable "ACL" {
-  type        = string
   description = "Enable you to manage access to buckets and objects"
+  type        = string
   default     = "private"
 }
 
@@ -13,17 +13,14 @@ variable "REGION" {
   default     = "us-east-1"
 }
 
-# variable "SSE_ALGORITHM" {
-#     description = "Provide Server Side Encryption with SSE Algoirthm"  
-# }
+variable "ENVIRONMENT" {
+    description = "Provide Server Side Encryption with SSE Algoirthm"
+    type = string
+}
 
 variable "STANDARD_TAGS" {
   description = "TAGS, YOU need them.."
   type = map(string)
-  default     = {
-    "Terraform" = "true"
-    "Environment" = "Dev"
-    "VPC Name"    = "Main"
-    "Terraform"   = "14.3"
-  }
+  default = { }
+  
 }
