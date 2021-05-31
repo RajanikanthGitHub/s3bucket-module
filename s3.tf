@@ -4,7 +4,7 @@ resource "aws_kms_key" "mykey" {
 }
 
 resource "aws_s3_bucket" "my-s3-ucket" {
-  bucket = "${var.PROUECT_NAME}-bucket"
+  bucket = "${var.PROJECT_NAME}-bucket"
   acl    = var.ACL
 
   versioning {
@@ -41,7 +41,7 @@ resource "aws_s3_bucket" "my-s3-ucket" {
   }
   tags = merge (
   {
-    Name = "${var.PROUJECT_NAME}"
+    Name = "S3Bukcet - ${var.PROJECT_NAME} "
     Project = "Demo-Project"
     Environment = "${var.ENVIRONMENT}"
     ManagedBy = "Terraform"
