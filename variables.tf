@@ -19,7 +19,9 @@ variable "REGION" {
 
 variable "STANDARD_TAGS" {
   description = "TAGS, YOU need them.."
+  type = map(string)
   default     = {
+    "Terraform" = "true"
     "Environment" = "Dev"
     "VPC Name"    = "Main"
     "Terraform"   = "14.3"
