@@ -18,9 +18,9 @@ variable "ENVIRONMENT" {
     type = string
 }
 
-variable "STANDARD_TAGS" {
+variable "tags" {
   description = "TAGS, YOU need them.."
   type = map(string)
-  default = { }
+  default = {}
   
 }
